@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
-  // Tod add new todo list into list
+  // add new todo list into list
   const addTodos = (text) => {
     const newTodo = {
       id: Date.now(),
@@ -38,14 +38,6 @@ function App() {
   const clearCompletedTodos = () => {
     setTodos(todos.filter((todo) => !todo.completed));
   };
-  // return (
-  //   <div>
-  //     <h2>Todo App</h2>
-  //     <TodoForm addTodos={addTodos} />
-  //     <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
-  //     <button onClick={clearCompletedTodos}>Clear Completed Tasks</button>
-  //   </div>
-  // );
   return (
     <div className="container">
       <h2>Todo App</h2>
